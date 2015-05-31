@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TextMessageGPS</string>
+
+    <string name="inputPhone">Enter a phone number or search from the address book:</string>
+    <string name="action_settings">Settings</string>
+</resources>

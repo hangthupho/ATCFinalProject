@@ -1,0 +1,126 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="@string/inputPhone"
+        android:id="@+id/title"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title"
+        android:weightSum="6">
+        <EditText
+            android:id="@+id/txtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:maxLength="8"
+            android:inputType="number"
+            android:layout_weight="4"/>
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:textSize="12dp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/txtInput"
+            android:layout_weight="1"
+            android:src="@drawable/add"/>
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/btnAdd"
+            android:layout_weight="1"
+            android:src="@drawable/search"/>
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/addPanel"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout1"/>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/addPanel"
+        android:paddingLeft="0dp"
+        android:paddingTop="12dp">
+        <TextView
+            android:text="Message:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:id="@+id/msgTitle"
+            android:textSize="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/addPanel"/>
+
+        <EditText
+            android:id="@+id/txtMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minLines="5"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:layout_below="@+id/msgTitle"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout2"
+        android:paddingTop="20dp"
+        android:paddingLeft="0dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btnGPS"
+            android:text=" Search location"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@+id/txtMessage"
+            android:drawableLeft="@drawable/location"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:text=" Send SMS"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMessage"
+            android:layout_toRightOf="@+id/btnGPS"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/send"/>
+    </LinearLayout>
+</RelativeLayout>
+
+</ScrollView>
